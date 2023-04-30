@@ -34,7 +34,7 @@ public class User {
     }
 
     public int getBalance() {
-        System.out.println("Your balances is " + balance + " azn");
+        System.out.println("Your account balances is " + balance + " azn");
         return balance;
     }
 
