@@ -18,10 +18,10 @@ public class User {
 
     public String getInfo() {
         System.out.println(
-                "İstifadəçi Məlumatları : " + "\n" +
-                        "Ad : " + getName() + "\n" +
-                        "Soyad : " + getSurname() + "\n" +
-                        "Yaş : " + getAge() + "\n" +
+                "Acoount informations : " + "\n" +
+                        "Name : " + getName() + "\n" +
+                        "Surname : " + getSurname() + "\n" +
+                        "Age : " + getAge() + "\n" +
                         "ID : " + getID() + "\n"
         );
 
@@ -34,7 +34,7 @@ public class User {
     }
 
     public int getBalance() {
-        System.out.println("Sizin balansınız " + balance + " azn təşkil edir");
+        System.out.println("Your balances is " + balance + " azn");
         return balance;
     }
 
