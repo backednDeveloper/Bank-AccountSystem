@@ -12,8 +12,7 @@ public class Loginmenu {
     public static int menu() {
         while (true) {
             try {
-                for (int i = 0; i < Globaldata.data.length; i++) {
-                    User user = Globaldata.data[i];
+                for (User information : Globaldata.accounts) {
                     Allmethods2 methods = new Allmethods2();
                     System.out.println("--------- Profile -------------");
                     int choose = Prints.inputRequiredInt(
@@ -50,7 +49,7 @@ public class Loginmenu {
                             break;
                         case 6:
                             System.out.println("\n" + "-----------Balance-------------");
-                            user.getBalance();
+                            information.getBalance();
                             return Loginmenu.menu();
                         case 7:
                             System.exit(-1);
