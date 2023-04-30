@@ -303,10 +303,9 @@ public class Allmethods2 implements Allmethods {
                                     int deneme = 3;
                                     do {
                                         for (int j = deneme; j >= 0; j--) {
-                                            HashMap<Integer, User> accountPassword = new HashMap<>();
                                             int password = Prints.inputRequiredInt("Enter your password : ");
                                             boolean passwordaccount = false;
-                                            User foundpassword = accountPassword.put(password, information);
+                                            User foundpassword = Globaldata.accountMapInteger.put(password, information);
                                             if (foundpassword != null) {
                                                 int total = information.getBalance();
                                                 int moneyout = Prints.inputRequiredInt("Enter the amount you want to withdraw : ");
