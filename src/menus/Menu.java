@@ -12,30 +12,30 @@ public class Menu {
                 Allmethods2 methods = new Allmethods2();
                 int choose = Prints.inputRequiredInt(
                         " " + "\n" +
-                                "1 - Qeydiyyat " + "\n" +
-                                "2 - Giriş " + "\n" +
+                                "1 - Register " + "\n" +
+                                "2 - Login " + "\n" +
                                 "3 - Exit " + "\n" +
                                 "         " + "\n" +
-                                "Yuxarıdakılardan birini seçin : "
+                                "Choose one of the above : "
                 );
                 switch (choose) {
                     case 1:
-                        System.out.println("\n" + "-----------Qeydiyyat-------------");
+                        System.out.println("\n" + "-----------Register-------------");
                         methods.register();
                         break;
                     case 2:
-                        System.out.println("\n" + "-----------Giriş-------------");
+                        System.out.println("\n" + "-----------Login-------------");
                         methods.login();
                         break;
                     case 3:
-                        System.out.println("\n" + "-----------Sistemdən Çıxış-------------");
+                        System.out.println("\n" + "-----------Exit System-------------");
                         System.exit(-1);
                         break;
                 }
 
             } catch (InputMismatchException e) {
                 System.out.println("!!!");
-                System.out.println("Yalnış məlumat qeyd etdiniz. Menuya yönləndirildiniz. Yenidən başlayın " + "\n");
+                System.out.println(" You have entered incorrect information. You have been redirected to the menu. Start again. " + "\n");
             }
         }
     }
