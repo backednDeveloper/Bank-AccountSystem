@@ -12,29 +12,28 @@ public class Loginmenu {
     public static int menu() {
         while (true) {
             try {
-                for (int i = 0; i < Globaldata.data.length; i++) {
-                    User user = Globaldata.data[i];
+                for (User information : Globaldata.accounts) {
                     Allmethods2 methods = new Allmethods2();
-                    System.out.println("--------- Profil -------------");
+                    System.out.println("--------- Profile -------------");
                     int choose = Prints.inputRequiredInt(
                             " " + "\n" +
-                                    "1 - Hesaba medaxil " + "\n" +
-                                    "2 - Hesabdan mexaric " + "\n" +
+                                    "1 - Adding money to the balance" + "\n" +
+                                    "2 - Withdraw money to the balance " + "\n" +
                                     "3 - Update " + "\n" +
                                     "4 - Menu " + "\n" +
                                     "5 - Delete " + "\n" +
-                                    "6 - Balans " + "\n" +
+                                    "6 - Balance " + "\n" +
                                     "7 - Exit " + "\n" +
                                     "         " + "\n" +
-                                    "Yuxarıdakılardan birini seçin : "
+                                    "Choose one of the above : "
                     );
                     switch (choose) {
                         case 1:
-                            System.out.println("\n" + "-----------Medaxil-------------");
+                            System.out.println("\n" + "-----------In Money-------------");
                             methods.medaxil();
                             break;
                         case 2:
-                            System.out.println("\n" + "-----------Mexaric-------------");
+                            System.out.println("\n" + "-----------Out Money-------------");
                             methods.mexaric();
                             break;
                         case 3:
@@ -42,15 +41,15 @@ public class Loginmenu {
                             methods.update();
                             break;
                         case 4:
-                            System.out.println("\n" + "-----------Menyuya Qayıdış-------------");
+                            System.out.println("\n" + "-----------Return Menu-------------");
                             return Menu.menu();
                         case 5:
                             System.out.println("\n" + "-----------Delete-------------");
                             methods.delete();
                             break;
                         case 6:
-                            System.out.println("\n" + "-----------Balans-------------");
-                            user.getBalance();
+                            System.out.println("\n" + "-----------Balance-------------");
+                            information.getBalance();
                             return Loginmenu.menu();
                         case 7:
                             System.exit(-1);
@@ -61,7 +60,7 @@ public class Loginmenu {
 
             } catch (InputMismatchException e) {
                 System.out.println("!!!");
-                System.out.println("Yalnış məlumat qeyd etdiniz. Profil menyusuna yönləndirildiniz. " + "\n");
+                System.out.println(" You have entered incorrect information. You have been redirected to the menu. Start again. " + "\n");
             }
         }
     }
