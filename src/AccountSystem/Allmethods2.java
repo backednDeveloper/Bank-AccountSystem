@@ -6,9 +6,7 @@ import menus.Loginmenu;
 import menus.Menu;
 import objects.User;
 
-import java.util.HashMap;
 import java.util.Locale;
-
 
 public class Allmethods2 implements Allmethods {
 
@@ -71,7 +69,7 @@ public class Allmethods2 implements Allmethods {
                     boolean found = false;
                     for (User informatin : Globaldata.accounts) {
                         User foundID = Globaldata.accountMapString.put(ID, informatin);
-                        User foundPassword = Globaldata.accountMapInteger.put(password , informatin);
+                        User foundPassword = Globaldata.accountMapInteger.put(password, informatin);
                         if (foundID != null) {
                             boolean checkpassword = false;
                             if (foundPassword != null) {
@@ -83,12 +81,12 @@ public class Allmethods2 implements Allmethods {
                             if (checkpassword != true) {
                                 System.out.println("Your enter wrong password. ");
                             }
-                            found = true;
-                            return Menu.menu();
                         }
-                        if (found != true) {
-                            System.out.println("This account is not available");
-                        }
+                        found = true;
+                        return Menu.menu();
+                    }
+                    if (found != true) {
+                        System.out.println("This account is not available");
                     }
                 } catch (ArrayIndexOutOfBoundsException e) {
                     System.out.println("Somethings gets wrong. Please enter again.");
@@ -113,7 +111,7 @@ public class Allmethods2 implements Allmethods {
                 boolean found = false;
                 for (User information : Globaldata.accounts) {
                     User foundID = Globaldata.accountMapString.put(ID, information);
-                    User foundPassword = Globaldata.accountMapInteger.put(password , information);
+                    User foundPassword = Globaldata.accountMapInteger.put(password, information);
                     if (foundID != null) {
                         boolean checkpassword = false;
                         if (foundPassword != null) {
